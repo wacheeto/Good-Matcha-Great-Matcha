@@ -1,0 +1,227 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #3C4A10;
+}
+.caprasimo-regular {
+    font-family: "Caprasimo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.green-container{
+    background-color: #3C4A10;
+}
+.container{
+    max-width: 1200px;
+}
+#main-img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+h1{
+    color: rgb(255, 236, 199);
+    font-size: 5rem;
+}
+header{
+    background-color: #3C4A10;
+}
+.main-text, .sub-text, .main-text:hover{
+    color:rgb(255, 236, 199) ;
+}
+.matcha-text{
+    color: #3C4A10;
+}
+#matcha-header{
+    height: 60vh;
+}
+.sub-container {
+    background-color: rgb(255, 236, 199);
+    /* min-height: 500px;
+    flex: 1; */
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #3C4A10;
+}
+.zoom-wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.zoom-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.circle img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.btn-matcha{
+    background-color: #3C4A10;
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.btn-matcha:hover, .btn-matcha:active{
+    background-color: #35410d;
+    color:rgb(255, 236, 199) ;
+}
+.btn-wheat{
+    background-color: rgb(255, 236, 199);
+    max-width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #35410d;
+}
+.btn-wheat:hover, .btn-wheat:active{
+    background-color: rgb(249, 228, 185);
+    color:#35410d ;
+}
+.img-container{
+    width: 350px;
+    height: 350px;
+    object-fit:cover;
+    border-radius: 15px;
+}
+#image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+.image-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.long-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.small-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    #image-row {
+        grid-template-columns: 1fr;
+    }
+    .image-column {
+        grid-column: span 1;
+    }
+
+    .long-image,
+    .small-image {
+        height: 500px;
+        max-width: 100%;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem;
+    width: 100%;
+}
+.square {
+    background-color: rgb(255, 236, 199);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #35410d;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+}
+.square p {
+    font-size: 0.95rem;
+    word-wrap: break-word;
+}
+#map{
+    height: 420px;
+    object-fit: cover;
+}
+
+.d-flex > .square {
+    flex: 1 1 0;
+}
+.rectangle {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* color: #35410d; */
+    padding: 1rem;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 1rem;
+}
+.cabin-condensed-regular {
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabin-condensed-medium {
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.cabin-condensed-semibold {
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.cabin-condensed-bold {
+    font-family: "Cabin Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.text-decoration-none {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.square-menu{
+    background-color: #35410d;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    color: black;
+    padding: 1rem;
+    min-height:200px;
+    min-width: 200px;
+}
+.square-menu img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .menu-sidebar {
+        position: sticky;
+        top: 120px;
+        align-self: flex-start;
+    }
+}
