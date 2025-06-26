@@ -225,15 +225,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
     <script>
         fetch("components/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-        fetch("components/footer.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        const isInScreens = location.pathname.includes("/screens/");
+        const prefix = isInScreens ? "../" : "";
+
+        document.getElementById("nav-home").href = prefix + "index.html";
+        document.getElementById("nav-menu").href = prefix + "screens/menu.html";
+        document.getElementById("nav-locations").href = prefix + "screens/locations.html";
+        document.getElementById("nav-about").href = prefix + "screens/about.html";
+        });
     </script>
+
 </body>
 </html>
