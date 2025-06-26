@@ -197,7 +197,15 @@
         fetch("../components/footer.html")
             .then(res => res.text())
             .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
+            document.getElementById("footer-placeholder").innerHTML = data;
+
+            const isInScreens = location.pathname.includes("/screens/");
+            const prefix = isInScreens ? "../" : "";
+            
+            document.getElementById("nav-home").href = prefix + "index.html";
+            document.getElementById("nav-menu").href = prefix + "screens/menu.html";
+            document.getElementById("nav-locations").href = prefix + "screens/locations.html";
+            document.getElementById("nav-about").href = prefix + "screens/about.html";
         });
     </script>
 </body>
